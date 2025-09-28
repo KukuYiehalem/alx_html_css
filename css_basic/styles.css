@@ -1,35 +1,65 @@
-/* Make <body> a flex container with vertical stacking */
+/* Layout positioning from previous tasks (don't remove) */
 body {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* full viewport height */
+  min-height: 100vh;
   margin: 0;
 }
-
-/* Make <main> a flex container with horizontal stacking */
 main {
   display: flex;
   flex-direction: row;
-  flex: auto; /* auto height and width */
+  flex: auto;
 }
-
-/* Article takes 2/3 of width */
 article {
   flex: 2;
-  overflow-y: auto; /* allow vertical scroll */
-  padding: 20px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  color: #222;
 }
-
-/* Aside takes 1/3 of width */
 aside {
   flex: 1;
-  overflow-y: auto; /* allow vertical scroll */
-  padding: 20px;
+  overflow-y: auto;
+  border-left: 2px solid #ddd;
+  padding: 15px;
+  background-color: #fff;
 }
 
-/* Optional styling for header and footer */
-header, footer {
-  padding: 20px;
-  background-color: #ddd;
+/* New styles for Task 3 */
+
+/* Style the logo */
+.logo {
+  font-size: 2rem;  /* bigger size */
+  color: #ff6600;   /* orange color */
+  margin-right: 10px;
+}
+
+/* Style the header list */
+header ul {
+  list-style: none;      /* remove bullets */
+  display: flex;         /* horizontal layout */
+  align-items: center;   /* vertical center */
+  padding: 0;
+  margin: 0;
+  background-color: #e0e0e0;
+  padding: 10px 20px;
+  border-bottom: 2px solid #ccc;
+}
+
+/* Style header text */
+header ul li:not(.logo) {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Style footer */
+footer {
   text-align: center;
+  padding: 10px;
+  background-color: #e0e0e0;
+  border-top: 2px solid #ccc;
+  color: #666;
+  font-size: 0.9rem;
 }
